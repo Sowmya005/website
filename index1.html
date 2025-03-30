@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAWS n' PURRS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Smooth Scrolling Effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section Styling */
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            padding: 40px;
+        }
+
+        #home {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('images/kissing.jpg') center/cover no-repeat;
+        }
+
+        #about {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('images/serene.jpg') center/cover no-repeat;
+        }
+
+        #categories {
+            background: #f8f8f8;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('images/guineas.jpg') center/cover no-repeat;
+            color: black;
+            flex-direction: column;
+        }
+
+        #contact {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('images/kid with cat.jpg') center/cover no-repeat;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 50px;
+        }
+
+        .navbar img {
+            height: 100px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            color: #ff7200;
+        }
+
+        /* Category Styling */
+        .category-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .category-card h2 {
+            margin-top: 10px;
+            font-size: 22px;
+            color: #ff7200;
+        }
+
+        .category-card p {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <img src="images/logo2.png" alt="PAWS n' PURRS Logo">
+        <ul>
+            <li><a href="#home">HOME PAGE</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#categories">CATEGORIES</a></li>
+            <li><a href="#contact">CONTACT DETAILS</a></li>
+        </ul>
+    </div>
+
+    <!-- Sections -->
+    <div id="home" class="section">
+        <div class="content">
+            <h1>Welcome to PAWS n' PURRS!</h1>
+            <p>We provide the best for your furry friends! From premium pet food to cozy beds, we’ve got everything to keep them happy.</p>
+        </div>
+    </div>
+
+    <div id="about" class="section">
+        <div class="content">
+            <h1>About Us</h1>
+            <p>At PAWS n' PURRS, we are passionate about pets. Our mission is to provide quality pet products that enhance the lives of your furry companions.</p>
+        </div>
+    </div>
+
+    <div id="categories" class="section">
+        <h1>Our Categories</h1>
+        <div class="category-container">
+            <div class="category-card">
+                <img src="images/food.jpg" alt="Pet Food">
+                <h2>Food</h2>
+                <p>High-quality, nutritious pet food for your furry friends.</p>
+            </div>
+            <div class="category-card">
+                <img src="images/access.jpg" alt="Pet Accessories">
+                <h2>Accessories</h2>
+                <p>Stylish and comfortable accessories for your pets.</p>
+            </div>
+            <div class="category-card">
+                <img src="images/groom.jpg" alt="Grooming Products">
+                <h2>Grooming Products</h2>
+                <p>Keep your pets clean and happy with our grooming products.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="section">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p>Email: info@pawsnpurrs.com | Phone: +123 456 7890</p>
+        </div>
+    </div>
+</body>
+</html>
