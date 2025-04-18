@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Food - PAWS n' PURRS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f9f9f9;
+        }
+
+        .header {
+            background: url('images/food.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #ff7200;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .filter-buttons {
+            text-align: center;
+            margin: 30px 0 10px;
+        }
+
+        .filter-buttons button {
+            background: #ff7200;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .filter-buttons button:hover {
+            background: #e66200;
+        }
+
+        .food-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px 40px;
+        }
+
+        .food-card {
+            background: white;
+            width: 250px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .food-card:hover {
+            transform: scale(1.05);
+        }
+
+        .food-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .food-card h3 {
+            margin: 15px 0 5px;
+            color: #333;
+        }
+
+        .food-card p {
+            font-size: 16px;
+            color: #ff7200;
+            margin: 5px 0 15px;
+        }
+
+        .buy-btn {
+            background: #008CBA;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: #0074a4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Pet Food</h1>
+        <p>Explore premium food for all your beloved pets.</p>
+        <a href="index1.html" class="back-link">← Back to Home</a>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button onclick="filterFood('all')">All</button>
+        <button onclick="filterFood('dog')">Dog</button>
+        <button onclick="filterFood('cat')">Cat</button>
+        <button onclick="filterFood('rabbit')">Rabbit</button>
+        <button onclick="filterFood('bird')">Bird</button>
+        <button onclick="filterFood('guinea')">Guinea Pig</button>
+    </div>
+
+    <!-- Food Cards -->
+    <div class="food-container">
+        <div class="food-card" data-type="dog">
+            <img src="images/dogfood.jpg" alt="Dog Food">
+            <h3>Beefy Bites (Dog)</h3>
+            <p>$15.99</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="food-card" data-type="cat">
+            <img src="images/catfood.jpg" alt="Cat Food">
+            <h3>Salmon Delight (Cat)</h3>
+            <p>$12.49</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="food-card" data-type="rabbit">
+            <img src="images/rabbitfood.jpg" alt="Rabbit Food">
+            <h3>Crunchy Greens (Rabbit)</h3>
+            <p>$9.99</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="food-card" data-type="bird">
+            <img src="images/birdfood.jpg" alt="Bird Food">
+            <h3>Tropical Seeds (Bird)</h3>
+            <p>$7.50</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+
+        <div class="food-card" data-type="guinea">
+            <img src="images/guineafood.jpg" alt="Guinea Pig Food">
+            <h3>NutriMix (Guinea Pig)</h3>
+            <p>$8.25</p>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Simple Filter Script -->
+    <script>
+        function filterFood(type) {
+            const cards = document.querySelectorAll('.food-card');
+            cards.forEach(card => {
+                const matches = card.getAttribute('data-type') === type || type === 'all';
+                card.style.display = matches ? 'block' : 'none';
+            });
+        }
+    </script>
+
+</body>
+</html>

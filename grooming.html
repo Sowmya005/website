@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grooming Products - PAWS n' PURRS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #333;
+        }
+
+        .header {
+            background: #ff7200;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background: #f4f4f4;
+            border-radius: 10px;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            color: #ff7200;
+            margin: 10px 0 5px;
+        }
+
+        .price {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #ff7200;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Grooming Products</h1>
+        <p>Everything you need to keep your pet looking and feeling fresh!</p>
+    </div>
+
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/shampoo.jpg" alt="Pet Shampoo">
+                <h3>Pet Shampoo</h3>
+                <p class="price">₹299</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/brush.jpg" alt="Grooming Brush">
+                <h3>Grooming Brush</h3>
+                <p class="price">₹249</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/nailclipper.jpg" alt="Nail Clipper">
+                <h3>Nail Clipper</h3>
+                <p class="price">₹199</p>
+            </div>
+
+            <div class="product-card">
+                <img src="images/trimmer.jpg" alt="trimmer">
+                <h3>trimmer</h3>
+                <p class="price">₹179</p>
+            </div>
+        </div>
+
+        <a href="index.html#categories" class="back-link">← Back to Categories</a>
+    </div>
+</body>
+</html>
